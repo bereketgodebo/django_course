@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core", #this is our new application
+    "users",
+    "django_extensions",
 ]
 
 MIDDLEWARE = [
