@@ -87,6 +87,6 @@ def UserInfoView(request):
         form = UserAlterationForm(instance = user, data = request.POST)
         if form.is_valid:
             form.save()
-            return redirect('/user-info/')
+            return redirect('/info/')
     else:
         return render(request, 'users/info.html', context) 
