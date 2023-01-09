@@ -34,6 +34,7 @@ class UserProfileForm(forms.ModelForm):
 	'''
 	Basic model-form for our user profile
 	'''
+	avatar = forms.ImageField(required=False)
 	telephone = forms.CharField(max_length=255, required=False, widget=forms.TextInput())
 	address = forms.CharField(max_length=100, required=False, widget=forms.TextInput())
 	town = forms.CharField(max_length=100, required=False, widget=forms.TextInput())
@@ -43,7 +44,8 @@ class UserProfileForm(forms.ModelForm):
 	
 	class Meta:
 		model = UserProfile
-		fields = ('telephone', 'address', 'town', 'county', 'post_code', 'country')
+		fields = ( 'avatar', 'telephone', 'address', 'town', 'county', 'post_code', 'country')
+
 
 
 class UserAlterationForm(forms.ModelForm):
